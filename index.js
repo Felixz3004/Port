@@ -97,9 +97,12 @@
       <a href="https://felixz3004.github.io/-/"target="_blank" class="btn primary">
       ดูโปรเจกต์
     </a>
-  </div>
-      <div class="card tilt">โปรเจกต์ 3(กำลังสร้างมองข้ามไปก่อน)</div>
-    </div>
+  <div class="card tilt">
+        <h3>โปรเจกต์ 3</h3>
+        <p>เกม XO </p>
+        <a href="https://felixz3004.github.io/-Xo/"target="_blank" class="btn primary">
+          ดูโปรเจกต์
+        </a>
   </section>
 
   
@@ -115,3 +118,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
