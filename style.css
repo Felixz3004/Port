@@ -1,0 +1,114 @@
+/* รีเซ็ตเบื้องต้น */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Prompt", sans-serif;
+  background: #0d0d0d;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* Canvas background */
+#bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: #000;
+}
+
+/* Navigation */
+.nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  position: fixed; top: 0; width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+.nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
+.nav .logo { font-weight: bold; font-size: 1.5rem; }
+.menu-btn { display: none; background: none; border: none; color: #fff; font-size: 2rem; }
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 60px; right: 0; width: 200px;
+}
+.mobile-nav a { padding: 1rem; border-bottom: 1px solid #222; }
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.glitch { font-size: 2.5rem; position: relative; }
+.subtitle { margin-top: 1rem; font-size: 1.2rem; color: #aaa; }
+
+.avatar-wrap { margin: 2rem auto; }
+.avatar-wrap img {
+  width: 150px; height: 150px;
+  border-radius: 50%; object-fit: cover;
+  border: 3px solid #fff;
+}
+.btn {
+  display: inline-block; margin: 0.5rem; padding: 0.5rem 1rem;
+  border-radius: 25px; border: none;
+  cursor: pointer; text-decoration: none;
+}
+.btn.primary { background: #00bcd4; color: #000; }
+.btn.ghost { background: transparent; border: 1px solid #fff; color: #fff; }
+
+.scroll-indicator { margin-top: 2rem; animation: bounce 1.5s infinite; }
+@keyframes bounce {
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(8px); }
+}
+
+/* Sections */
+.section { padding: 6rem 2rem; }
+.container { max-width: 900px; margin: auto; }
+h2 { margin-bottom: 1.5rem; font-size: 2rem; color: #00bcd4; }
+
+/* Skills */
+.skill { margin: 1rem 0; }
+.bar {
+  background: #222; border-radius: 10px;
+  overflow: hidden; height: 12px;
+}
+.bar div { background: #00bcd4; height: 100%; }
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+.card {
+  padding: 2rem; background: #111;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.card:hover { transform: scale(1.05); }
+
+/* Back to top */
+#backToTop {
+  position: fixed; bottom: 30px; right: 30px;
+  padding: 0.6rem; border-radius: 50%;
+  border: none; background: #00bcd4; color: #000;
+  cursor: pointer; display: none;
+}
+
+/* Reveal animation */
+.reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+@media(max-width:768px){
+  .menu-btn { display: block; }
+  .nav nav { display: none; }
+}
